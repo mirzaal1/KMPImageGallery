@@ -1,11 +1,31 @@
 plugins {
+    kotlin("multiplatform")
     id("com.android.application")
-    kotlin("android")
+    id("org.jetbrains.compose")
 }
+
+
+kotlin {
+    androidTarget()
+    sourceSets {
+        val androidMain by getting {
+            dependencies {
+                implementation(project(":shared"))
+                api(libs.androidxActivityCompose)
+                api(libs.androidxAppcompat)
+                api(libs.androidxCoreKtx)
+            }
+        }
+    }
+}
+
 
 android {
     namespace = "com.mirzaal1.kmpimagegallery.android"
     compileSdk = 33
+
+    sourceSets["main"].manifest.srcFile("src/Main/AndroidManifest.xml")
+
     defaultConfig {
         applicationId = "com.mirzaal1.kmpimagegallery.android"
         minSdk = 24
@@ -13,37 +33,17 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.4"
-    }
-    packagingOptions {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
+/*
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
         }
-    }
+    }*/
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+    kotlin {
+        jvmToolchain(11)
     }
-}
-
-dependencies {
-    implementation(project(":shared"))
-    implementation("androidx.compose.ui:ui:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
-    implementation("androidx.compose.foundation:foundation:1.4.0")
-    implementation("androidx.compose.material:material:1.4.0")
-    implementation("androidx.activity:activity-compose:1.7.0")
 }
