@@ -19,6 +19,19 @@ class ImagesGalleryViewModel(private val fetchUseCase: ImagesFetchUseCase) : KMM
         fetchImages()
     }
 
+    fun refreshImages() {
+        _images.value = Images()
+        fetchImages()
+    }
+
+    fun loadMore() {
+        with(_images.value) {
+            if (currentPage < totalPages) {
+                fetchImages(currentPage + 1)
+            }
+        }
+    }
+
     private fun fetchImages(pageNumber: Int = 1) {
         fetchUseCase.getImages(pageNumber).onStart { _state.value = State.LOADING }
             .onEach { images ->
