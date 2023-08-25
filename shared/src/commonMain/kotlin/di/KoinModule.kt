@@ -6,7 +6,6 @@ import data.source.remote.ImagesRemoteDataSource
 import data.source.remote.ImagesService
 import domain.mapper.ImageMapper
 import domain.usecase.ImagesFetchUseCase
-import domain.usecase.SingleImageFetchUseCase
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
 import org.koin.dsl.KoinAppDeclaration
@@ -22,13 +21,12 @@ fun initKoin(appDeclaration: KoinAppDeclaration) = startKoin {
 fun initKoin() = initKoin { }
 
 private val sharedModules: List<Module>
-    get() = listOf(apiModule, repositoryModule, useCaseModule, utilityModule)
+    get() = listOf(useCaseModule, repositoryModule, apiModule, utilityModule)
 
 
 private val useCaseModule = module {
     factory { ImageMapper(get()) }
     factory { ImagesFetchUseCase() }
-    factory { SingleImageFetchUseCase() }
 }
 
 private val repositoryModule = module {

@@ -1,16 +1,24 @@
+import UIKit
 import SwiftUI
 import shared
 
-struct ContentView: View {
-	let greet = Greeting().greet()
-
-	var body: some View {
-		Text(greet)
-	}
+struct ComposeView: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        let viewModel = ImagesGalleryViewModel.init(fetchUseCase: ImagesFetchUseCase.init())
+        return Main_iOSKt.MainView(viewModel: viewModel)
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-	}
+struct ContentView: View {
+    
+    init() {
+       KoinModuleKt.doInitKoin()
+    }
+    
+    var body: some View {
+        ComposeView().ignoresSafeArea(.keyboard)
+    }
 }
