@@ -2,7 +2,7 @@
 
 Kotlin Multiplatform Project developed to display the images (artistic creations by MidJourney ) this application is developed with Compose Multiplatform and works on Android and iOS platform.
 
-<p align="center"><img src="git-assets/appPlay.gif" alt="kmm-compose-header" /><br><br></p>
+<p align="center"><img src="showcase-assets/appPlay.gif" alt="kmm-compose-header" /><br><br></p>
 
 This application was built using the MVVM architecture, leveraging Kotlin Multiplatform and Compose Multiplatform. It incorporated features such as managing network request statuses, implementing endless pagination, and loading images.
 
@@ -22,7 +22,7 @@ This application was built using the MVVM architecture, leveraging Kotlin Multip
 - MacOS
 - [Environment](https://github.com/JetBrains/compose-multiplatform-ios-android-template#set-up-the-environment) must be installed.
 
-<p align="center"><img src="git-assets/image.png" alt="kmm-compose-header" /><br><br></p>
+<p align="center"><img src="showcase-assets/image.png" alt="kmm-compose-header" /><br><br></p>
 
 ## API
 
