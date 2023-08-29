@@ -1,4 +1,4 @@
-# Kotlin Multiplatform Image Gallery
+# Kotlin Multiplatform Artistic Images Gallery
 
 Kotlin Multiplatform Project developed to display the images (artistic creations by MidJourney ) this application is developed with Compose Multiplatform and works on Android and iOS platform.
 
