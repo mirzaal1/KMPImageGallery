@@ -19,7 +19,7 @@ This application was built using the MVVM architecture, leveraging Kotlin Multip
 
 ## iOS and Android simulation
 
-<p align="center"><img src="showcase-assets/appPlay.gif" alt="kmm-compose-header" /><br><br></p>
+[appPlay.webm](https://github.com/mirzaal1/KMPImageGallery/assets/47493018/7477767e-0cae-4790-be55-20b9c7cf2f4f)
 
 ## Requirements
 
