@@ -17,7 +17,7 @@ This application was built using the MVVM architecture, leveraging Kotlin Multip
 - [KMM-ViewModel](https://github.com/rickclephas/KMM-ViewModel)
 - [Compose Material Dialogs](https://github.com/vanpra/compose-material-dialogs)
 
-## iOS and Androd simulation
+## iOS and Android simulation
 
 <p align="center"><img src="showcase-assets/appPlay.gif" alt="kmm-compose-header" /><br><br></p>
 
