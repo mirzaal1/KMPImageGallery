@@ -26,10 +26,6 @@ This application was built using the MVVM architecture, leveraging Kotlin Multip
 - MacOS
 - [Environment](https://github.com/JetBrains/compose-multiplatform-ios-android-template#set-up-the-environment) must be installed.
 
-## API
-
-The API used for the application is [mj.akgns.com](https://mj.akgns.com/)
-
 ## Contact
 
 * Linkedin: https://www.linkedin.com/in/mirzaal1
